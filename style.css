@@ -1,6 +1,67 @@
+@font-face {
+    font-family: Ubuntu-Bold;
+    src: url("./assets/fonts/Ubuntu-Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: Ubuntu-Medium;
+    src: url("./assets/fonts/Ubuntu-Medium.ttf");
+    font-weight: 500;
+}
+@font-face {
+    font-family: Ubuntu-Regular;
+    src: url("./assets/fonts/Ubuntu-Regular.ttf");
+    font-weight: 400;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
     background-color: hsl(206, 94%, 87%);
+}
+.home{
+    width: 65%;
+    padding: 17px;
+    background-color: hsl(0, 0%, 100%);
+}
+.aside{
+    width: 29%;
+    background-image: url('./assets/images/bg-sidebar-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+.step{
+    display: flex;
+    align-items: center;
+}
+.num{
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: hsl(231, 100%, 99%);
+    border-radius: 50%;
+    border: 2.3px solid hsl(217, 100%, 97%);
+    margin-right: 15px;
+    font-family: "Ubuntu-Medium";
+}
+.info small{
+    font-family: "Ubuntu-Medium";
+    color: hsl(231, 11%, 63%);
+}
+.info p{
+    font-family: "Ubuntu-Bold";
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
