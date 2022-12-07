@@ -24,12 +24,15 @@ body{
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background-color: hsl(206, 94%, 87%);
+    background-color: hsl(217, 100%, 97%);
 }
 .home{
-    width: 65%;
+    min-width: 65%;
     padding: 17px;
     background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
 }
 .aside{
     width: 29%;
@@ -38,10 +41,14 @@ body{
     background-position: center;
     background-size: cover;
     color: white;
+    border-radius: 15px;
+    padding: 32px 38px;
+    min-width: 274px;
 }
 .step{
     display: flex;
     align-items: center;
+    margin-bottom: 34px;
 }
 .num{
     width: 38px;
@@ -56,6 +63,9 @@ body{
     margin-right: 15px;
     font-family: "Ubuntu-Medium";
 }
+.info{
+    margin-top: -3px;
+}
 .info small{
     font-family: "Ubuntu-Medium";
     color: hsl(231, 11%, 63%);
@@ -64,4 +74,10 @@ body{
     font-family: "Ubuntu-Bold";
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-size: 14px;
+}
+.step.active .num{
+    background-color: hsl(206, 94%, 87%);
+    border: 2.3px solid hsl(206, 94%, 87%);
+    color: hsl(243, 100%, 62%);
 }
