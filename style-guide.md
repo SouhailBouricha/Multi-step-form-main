@@ -57,8 +57,8 @@ The designs were created to the following widths:
   <!--Personal info
   Please provide your name, email address, and phone number.-->
 
-  Name
-  e.g. Stephen King
+  <!--Name
+  e.g. Stephen King.-->
 
   Email Address
   e.g. stephenking@lorem.com
