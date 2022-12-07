@@ -81,3 +81,27 @@ body{
     border: 2.3px solid hsl(206, 94%, 87%);
     color: hsl(243, 100%, 62%);
 }
+.details{
+    background-color: blue;
+    flex: 1;
+    font-family: 'Ubuntu-Regular';
+    padding: 43px 0px;
+}
+.step_1{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    background-color: aqua;
+}
+.head{
+    color: hsl(213, 96%, 18%);
+    font-family: 'Ubuntu-Bold';
+    margin-bottom: 20px;
+}
+.para{
+    color: hsl(231, 11%, 63%);
+    font-family: "Ubuntu-Medium";
+    font-size: 15px;
+    margin-bottom: 45px;
+}
