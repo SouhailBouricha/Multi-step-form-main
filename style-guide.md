@@ -54,8 +54,8 @@ The designs were created to the following widths:
 
   <!-- Step 1 start -->
 
-  Personal info
-  Please provide your name, email address, and phone number.
+  <!--Personal info
+  Please provide your name, email address, and phone number.-->
 
   Name
   e.g. Stephen King
