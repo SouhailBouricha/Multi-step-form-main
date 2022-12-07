@@ -60,8 +60,9 @@ The designs were created to the following widths:
   <!--Name
   e.g. Stephen King.-->
 
+  <!--Name
   Email Address
-  e.g. stephenking@lorem.com
+  e.g. stephenking@lorem.com.-->
 
   Phone Number
   e.g. +1 234 567 890
