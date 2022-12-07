@@ -38,7 +38,7 @@ The designs were created to the following widths:
 
 <!-- Sidebar start -->
 
-  Step 1
+ <!-- Step 1
   Your info
 
   Step 2
@@ -48,7 +48,7 @@ The designs were created to the following widths:
   Add-ons
 
   Step 4
-  Summary
+  Summary -->
 
   <!-- Sidebar end -->
 
