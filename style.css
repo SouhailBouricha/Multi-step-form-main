@@ -221,8 +221,36 @@ body{
     width: 80%;
     margin: auto;
 }
-
-
+.AddOns_card{
+    border: 2.5px solid hsl(243, 100%, 62%);
+    background-color: hsl(217, 100%, 97%);
+    border-radius: 10px;
+}
+.cbx_all{
+    /* background-color: #9098A9; */
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    padding: 22px 26px;
+}
+.AddOns_price{
+    margin-left: auto;
+    color: hsl(231, 11%, 63%);
+    /* color: hsl(229, 24%, 87%); */
+}
+.AddOns_info h2{
+    font-size: 14px;
+    color: hsl(213, 96%, 18%);
+    margin-bottom: 6px;
+}
+.AddOns_info p{
+    font-size: 12px;
+    color: hsl(231, 11%, 63%);
+    margin-top: 6px;
+}
+.cbx_all span{
+    margin-right: 26px;
+}
 /*Toggle */
 .knobs, .layer{
     position: absolute;
@@ -304,4 +332,77 @@ body{
 #button-1 .knobs, #button-1 .knobs:before, #button-1 .layer
 {
     transition: 0.3s ease all;
+}
+
+.cbx {
+  margin: auto;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+.cbx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+.cbx span:first-child {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 1px solid #9098A9;
+  transition: all 0.2s ease;
+}
+.cbx span:first-child svg {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+.cbx span:first-child:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: hsl(243, 100%, 62%);
+  display: block;
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+}
+.cbx span:last-child {
+  padding-left: 8px;
+}
+.cbx:hover span:first-child {
+  border-color: hsl(243, 100%, 62%);
+}
+
+.inp-cbx:checked + .cbx span:first-child {
+  background: hsl(243, 100%, 62%);
+  border-color: hsl(243, 100%, 62%);
+  animation: wave 0.4s ease;
+}
+.inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+.inp-cbx:checked + .cbx span:first-child:before {
+  transform: scale(3.5);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+@keyframes wave {
+  50% {
+    transform: scale(0.9);
+  }
 }
