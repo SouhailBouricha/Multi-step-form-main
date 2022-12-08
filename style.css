@@ -136,3 +136,132 @@ body{
     cursor: pointer;
     font-family: "Ubuntu-Medium";
 }
+.notAvailable{
+    display: none;
+}
+.step_2{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+.plans_cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+}
+.Monthly_Yearly{
+    background-color: hsl(231, 100%, 99%);
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    padding: 19px 0px;
+}
+.Monthly_Yearly_Label{
+    font-size: 14px;
+    font-family: "Ubuntu-Bold";
+}
+.checkd_Label{
+    color: hsl(213, 96%, 18%);
+}
+.Uncheckd_Label{
+    color: hsl(231, 11%, 63%);
+}
+.Monthly_Yearly_Wrapp{
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+
+
+
+
+
+
+
+/*Toggle */
+.knobs, .layer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button{
+    position: relative;
+    top: 50%;
+    width: 38px;
+    height: 23px;
+    /* margin: -20px auto 0 auto; */
+    overflow: hidden;
+}
+
+.button.r, .button.r .layer{
+    border-radius: 100px;
+}
+
+.button.b2
+{
+    border-radius: 2px;
+}
+
+.checkbox
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs
+{
+    z-index: 2;
+}
+
+.layer
+{
+    width: 100%;
+    background-color: hsl(213, 96%, 18%);
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+/* Button 1 */
+#button-1 .knobs:before
+{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 7px;
+    height: 7px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 5px 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-1 .checkbox:checked + .knobs:before
+{
+    content: '';
+    left: 19px;
+}
+
+#button-1 .knobs, #button-1 .knobs:before, #button-1 .layer
+{
+    transition: 0.3s ease all;
+}
