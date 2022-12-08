@@ -222,13 +222,14 @@ body{
     margin: auto;
 }
 .AddOns_card{
-    border: 2.5px solid hsl(243, 100%, 62%);
-    background-color: hsl(217, 100%, 97%);
+    border: 2.5px solid hsl(229, 24%, 87%); 
     border-radius: 10px;
+    transition: background-color .2s ease-in-out,border .2s ease-in-out; 
+}
+.AddOns_card:not(:last-child){
+    margin-bottom: 16px;
 }
 .cbx_all{
-    /* background-color: #9098A9; */
-    /* width: 100%; */
     display: flex;
     align-items: center;
     padding: 22px 26px;
@@ -399,6 +400,10 @@ body{
   transform: scale(3.5);
   opacity: 0;
   transition: all 0.6s ease;
+}
+.AddOns_card:has(> .inp-cbx:checked){
+    border: 2.5px solid hsl(243, 100%, 62%);
+    background-color: hsl(217, 100%, 97%);
 }
 
 @keyframes wave {
