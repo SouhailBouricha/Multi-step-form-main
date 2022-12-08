@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="details">
-        <div class="step_1 notAvailable">
+        <div class="step_1">
           <h1 class="head">Personal info</h1>
           <p class="para">Please provide your name, email address, and phone number.</p>
           <label for="name" class="label">Name</label>
@@ -59,11 +59,11 @@
           <input type="text" id="number" class="details_input" placeholder="e.g. +1 234 567 890" autocomplete="off">
           <button class="next">Next Step</button>
         </div>
-        <div class="step_2">
+        <div class="step_2 notAvailable">
           <h1 class="head">Select your plan</h1>
           <p class="para">You have the option of monthly or yearly billing.</p>
           <div class="plans_cards">
-            <div class="card">
+            <div class="card card_active">
               <img src="./assets/images/icon-arcade.svg" alt="Arcade">
               <h2>Arcade</h2>
               <p>$9/mo</p>
@@ -89,6 +89,10 @@
               </div>
               <label class="Monthly_Yearly_Label Uncheckd_Label">Yearly</label>
             </div>
+          </div>
+          <div class="suivant">
+            <button class="next back">Go Back</button>
+            <button class="next">Next Step</button>
           </div>
         </div>
       </div>

@@ -150,9 +150,10 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 36px;
+    gap: 22px;
 }
 .Monthly_Yearly{
-    background-color: hsl(231, 100%, 99%);
+    background-color: hsl(226, 100%, 97%);
     align-items: center;
     display: flex;
     align-items: center;
@@ -175,11 +176,38 @@ body{
     align-items: center;
     gap: 23px;
 }
-
-
-
-
-
+.card{
+    padding: 25px 14px;
+    flex: 1;
+    border: 3px solid hsl(231, 11%, 63%);
+    cursor: pointer;
+    border-radius: 15px;
+}
+.card_active{
+    background-color: hsl(231, 100%, 96%);
+}
+.card img{
+    margin-bottom: 43px;
+}
+.card h2{
+    font-size: 14px;
+    color: hsl(213, 96%, 18%);
+    margin-bottom: 10px;
+}
+.card p{
+    color: hsl(231, 11%, 63%);
+    font-size: 13px;
+}
+.suivant{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.next.back{
+    background-color: transparent;
+    color: hsl(231, 11%, 63%);
+}
 
 
 
