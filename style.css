@@ -136,14 +136,14 @@ body{
     cursor: pointer;
     font-family: "Ubuntu-Medium";
 }
-.notAvailable{
-    display: none;
-}
 .step_2{
     display: flex;
     flex-direction: column;
     width: 80%;
     margin: auto;
+}
+.notAvailable{
+    display: none;
 }
 .plans_cards{
     display: flex;
@@ -183,8 +183,12 @@ body{
     cursor: pointer;
     border-radius: 15px;
 }
+.card:hover{
+    border: 3px solid hsl(243, 100%, 62%);
+}
 .card_active{
     background-color: hsl(231, 100%, 96%);
+    border: 3px solid hsl(243, 100%, 62%);
 }
 .card img{
     margin-bottom: 43px;
@@ -208,7 +212,15 @@ body{
     background-color: transparent;
     color: hsl(231, 11%, 63%);
 }
-
+.next.back:hover{
+    color: hsl(213, 96%, 18%);
+}
+.step_3{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
 
 
 /*Toggle */
