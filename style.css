@@ -120,6 +120,9 @@ body{
     outline: none;
     border: 2px solid hsl(231, 11%, 63%);
     border-radius: 7px;
+    font-size: 14px;
+    color: hsl(213, 96%, 18%);
+    font-family: 'Ubuntu-Bold';
 }
 .next{
     font-size: 17px;
