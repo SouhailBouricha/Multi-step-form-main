@@ -142,9 +142,6 @@ body{
     width: 80%;
     margin: auto;
 }
-.notAvailable{
-    display: none;
-}
 .plans_cards{
     display: flex;
     justify-content: space-between;
@@ -252,6 +249,8 @@ body{
 .cbx_all span{
     margin-right: 26px;
 }
+
+
 /*Toggle */
 .knobs, .layer{
     position: absolute;
@@ -410,4 +409,7 @@ body{
   50% {
     transform: scale(0.9);
   }
+}
+.notAvailable{
+    display: none;
 }
