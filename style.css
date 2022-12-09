@@ -249,8 +249,56 @@ body{
 .cbx_all span{
     margin-right: 26px;
 }
-
-
+.step_4{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+.confirm_details{
+    background-color: hsl(217, 76%, 92%);
+    padding: 21px 26px;
+    border-radius: 15px;
+}
+.confirm_details_infos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: hsl(213, 96%, 18%);
+    margin-bottom: 25px;
+}
+.confirm_details_infos_left h3{
+    font-size: 20px;
+    font-family: 'Ubuntu-Bold';
+    margin-bottom: 5px;
+}
+.confirm_details_infos_left a{
+    font-size: 16px;
+    margin-top: 5px;
+    font-family: 'Ubuntu-Medium';
+    color: hsl(231, 11%, 63%);
+}
+.confirm_details_infos h3{
+    font-size: 17px;
+}
+.addsone_finale{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.addsone_finale:not(:last-child){
+    margin-bottom: 25px;
+}
+.addsone_finale p{
+    font-size: 14px;
+    font-family: 'Ubuntu-Medium';
+    color: hsl(231, 11%, 63%);
+}
+.addsone_finale h4{
+    font-size: 14px;
+    font-family: 'Ubuntu-Medium';
+    color: hsl(213, 96%, 18%);
+}
 /*Toggle */
 .knobs, .layer{
     position: absolute;
@@ -259,7 +307,12 @@ body{
     bottom: 0;
     left: 0;
 }
-
+.line{
+    height: 2px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color:  hsl(229, 24%, 87%);
+}
 .button{
     position: relative;
     top: 50%;
