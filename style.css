@@ -256,9 +256,10 @@ body{
     margin: auto;
 }
 .confirm_details{
-    background-color: hsl(217, 76%, 92%);
+    background-color: hsl(217, 100%, 97%);
     padding: 21px 26px;
     border-radius: 15px;
+    margin-bottom: 25px;
 }
 .confirm_details_infos{
     display: flex;
@@ -298,6 +299,27 @@ body{
     font-size: 14px;
     font-family: 'Ubuntu-Medium';
     color: hsl(213, 96%, 18%);
+}
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 26px;
+    margin-bottom: 40px;
+}
+.total p{
+    font-size: 14px;
+    font-family: 'Ubuntu-Medium';
+    color: hsl(231, 11%, 63%);
+}
+.total h3{
+    color: hsl(243, 100%, 62%);
+    font-family: 'Ubuntu-Medium';
+    font-size: 18px;
+}
+.immpo{
+    padding: 11px 0px;
+
 }
 /*Toggle */
 .knobs, .layer{
