@@ -147,6 +147,7 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 36px;
+    flex-wrap: wrap;
     gap: 22px;
 }
 .Monthly_Yearly{
@@ -179,6 +180,7 @@ body{
     border: 3px solid hsl(231, 11%, 63%);
     cursor: pointer;
     border-radius: 15px;
+    min-width: 150px;
 }
 .card:hover{
     border: 3px solid hsl(243, 100%, 62%);
@@ -320,6 +322,28 @@ body{
 .immpo{
     padding: 11px 0px;
 
+}
+@media screen and (max-width:695px) {
+    body{
+        align-items: flex-start;
+        background-color: hsl(0, 0%, 100%);
+    }
+    .home{
+        flex-direction: column;
+        width: 100%;
+        bottom: 
+        padding: 0px;
+    }
+    .aside{
+        width: 100%;
+        border-radius: 0px;
+        display: flex;
+        background-image: url("./assets/images/bg-sidebar-mobile.svg");
+        justify-content: center;
+    }
+    .aside .step .info{
+        display: none;
+    }
 }
 /*Toggle */
 .knobs, .layer{
