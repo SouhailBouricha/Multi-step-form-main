@@ -8,6 +8,8 @@ const backBtn = document.querySelector(".back");
 const checkboxBtn = document.querySelector(".checkbox");
 const monthLabel = document.querySelector(".Monthly_Yearly_Label1");
 const yearlyLabel = document.querySelector(".Monthly_Yearly_Label2");
+const cardsPara = document.querySelectorAll(".card p");
+const cards = document.querySelectorAll(".card");
 let PageId = 0;
 const lookUp = { "0" : true,"1" : true,"2" : true,"3" : true,"4" : true,"5" : true,"6" : true,"7" : true,"8" : true,"9" : true,"10" : true,
 }
@@ -70,10 +72,24 @@ checkboxBtn.addEventListener("click",()=>{
         monthLabel.classList.add("Uncheckd_Label");
         monthLabel.classList.remove("checkd_Label");
         yearlyLabel.classList.add("checkd_Label");
+        yearlyLabel.classList.remove("Uncheckd_Label");
+        cardsPara[0].textContent = "$90/yr";
+        cardsPara[1].textContent = "$120/yr";
+        cardsPara[2].textContent = "$150/yr";
     }
     else{
-        yearlyLabel.classList.remove("Uncheckd_Label");
-        yearlyLabel.classList.add("checkd_Label");
-        monthLabel.classList.add("Uncheckd_Label");
+        yearlyLabel.classList.remove("checkd_Label");
+        yearlyLabel.classList.add("Uncheckd_Label");
+        monthLabel.classList.add("checkd_Label");
+        monthLabel.classList.remove("Uncheckd_Label");
+        cardsPara[0].textContent = "$9/mo";
+        cardsPara[1].textContent = "$12/mo";
+        cardsPara[2].textContent = "$15/mo";
     }
 })
+cards.forEach((card) =>{
+    card.addEventListener("click",(e) =>{
+        cards.forEach(card => card.classList.remove("card_active"));
+        card.classList.add("card_active");     
+    });
+});
