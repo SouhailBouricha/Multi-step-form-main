@@ -4,14 +4,15 @@ const error = document.querySelector(".error");
 const phone = document.querySelector(".phone");
 const pages = document.querySelectorAll(".pages");
 const steps = document.querySelectorAll(".step");
-const backBtn = document.querySelector(".back");
+const backBtns = document.querySelectorAll(".back");
 const checkboxBtn = document.querySelector(".checkbox");
 const monthLabel = document.querySelector(".Monthly_Yearly_Label1");
 const yearlyLabel = document.querySelector(".Monthly_Yearly_Label2");
 const cardsPara = document.querySelectorAll(".card p");
 const cards = document.querySelectorAll(".card");
+const AddOnsPrices = document.querySelectorAll(".AddOns_price");
 const nextStep2Btn = document.querySelector(".next_step2");
-const ChosenPlan = { "plan" : "Arcade" , price : 9 };
+const ChosenPlan = { plan : "Arcade" , price : 9 , state : "monthly"};
 let PageId = 0;
 const lookUp = { "0" : true,"1" : true,"2" : true,"3" : true,"4" : true,"5" : true,"6" : true,"7" : true,"8" : true,"9" : true,"10" : true,
 }
@@ -64,9 +65,11 @@ form.addEventListener("submit",(e) => {
         moveToTheNextPage(PageId);
     }
 });
-backBtn.addEventListener("click", () =>{
-    PageId--;
-    moveToTheNextPage(PageId);
+backBtns.forEach(back =>{
+    back.addEventListener("click", () =>{
+        PageId--;
+        moveToTheNextPage(PageId);
+    });
 });
 
 checkboxBtn.addEventListener("click",()=>{
@@ -78,6 +81,9 @@ checkboxBtn.addEventListener("click",()=>{
         cardsPara[0].textContent = "$90/yr";
         cardsPara[1].textContent = "$120/yr";
         cardsPara[2].textContent = "$150/yr";
+        AddOnsPrices[0].textContent = "+$10/yr";
+        AddOnsPrices[1].textContent = "+$20/yr";
+        AddOnsPrices[2].textContent = "+$20/yr";
     }
     else{
         yearlyLabel.classList.remove("checkd_Label");
@@ -87,6 +93,9 @@ checkboxBtn.addEventListener("click",()=>{
         cardsPara[0].textContent = "$9/mo";
         cardsPara[1].textContent = "$12/mo";
         cardsPara[2].textContent = "$15/mo";
+        AddOnsPrices[0].textContent = "+$1/mo";
+        AddOnsPrices[1].textContent = "+$2/mo";
+        AddOnsPrices[2].textContent = "+$2/mo";
     }
 })
 cards.forEach((card) =>{
@@ -99,8 +108,17 @@ nextStep2Btn.addEventListener("click", (e) =>{
     cards.forEach((card) =>{
         if(card.classList.contains("card_active")){
             ChosenPlan["plan"] = card.children[1].textContent;
-            ChosenPlan["price"] = card.getAttribute("price");
+            if(checkboxBtn.checked){
+                ChosenPlan["price"] = 10 * Number(card.getAttribute("price"));
+                ChosenPlan["state"] = "yearly";
+            }
+            else{
+                ChosenPlan["price"] = Number(card.getAttribute("price"));
+                ChosenPlan["state"] = "monthly";
+            }
             console.log(ChosenPlan);
         }
     });
+    PageId++;
+    moveToTheNextPage(PageId);
 });
