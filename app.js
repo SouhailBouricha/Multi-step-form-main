@@ -10,6 +10,8 @@ const monthLabel = document.querySelector(".Monthly_Yearly_Label1");
 const yearlyLabel = document.querySelector(".Monthly_Yearly_Label2");
 const cardsPara = document.querySelectorAll(".card p");
 const cards = document.querySelectorAll(".card");
+const nextStep2Btn = document.querySelector(".next_step2");
+const ChosenPlan = { "plan" : "Arcade" , price : 9 };
 let PageId = 0;
 const lookUp = { "0" : true,"1" : true,"2" : true,"3" : true,"4" : true,"5" : true,"6" : true,"7" : true,"8" : true,"9" : true,"10" : true,
 }
@@ -91,5 +93,14 @@ cards.forEach((card) =>{
     card.addEventListener("click",(e) =>{
         cards.forEach(card => card.classList.remove("card_active"));
         card.classList.add("card_active");     
+    });
+});
+nextStep2Btn.addEventListener("click", (e) =>{
+    cards.forEach((card) =>{
+        if(card.classList.contains("card_active")){
+            ChosenPlan["plan"] = card.children[1].textContent;
+            ChosenPlan["price"] = card.getAttribute("price");
+            console.log(ChosenPlan);
+        }
     });
 });
