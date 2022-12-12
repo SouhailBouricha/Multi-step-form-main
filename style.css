@@ -331,8 +331,8 @@ body{
     .home{
         flex-direction: column;
         width: 100%;
-        bottom: 
         padding: 0px;
+        background-color: hsl(217, 100%, 97%);
     }
     .aside{
         width: 100%;
@@ -340,9 +340,20 @@ body{
         display: flex;
         background-image: url("./assets/images/bg-sidebar-mobile.svg");
         justify-content: center;
+        min-height: 200px;
     }
     .aside .step .info{
         display: none;
+    }
+    .step_1
+    ,.step_2
+    ,.step_3
+    ,.step_4{
+        background-color: hsl(0, 0%, 100%);
+        padding: 25px 25px;
+        border-radius: 15px;
+        width: 90%;
+        margin-top: -100px;
     }
 }
 /*Toggle */
