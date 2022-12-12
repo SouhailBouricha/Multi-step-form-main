@@ -5,6 +5,9 @@ const phone = document.querySelector(".phone");
 const pages = document.querySelectorAll(".pages");
 const steps = document.querySelectorAll(".step");
 const backBtn = document.querySelector(".back");
+const checkboxBtn = document.querySelector(".checkbox");
+const monthLabel = document.querySelector(".Monthly_Yearly_Label1");
+const yearlyLabel = document.querySelector(".Monthly_Yearly_Label2");
 let PageId = 0;
 const lookUp = { "0" : true,"1" : true,"2" : true,"3" : true,"4" : true,"5" : true,"6" : true,"7" : true,"8" : true,"9" : true,"10" : true,
 }
@@ -61,3 +64,16 @@ backBtn.addEventListener("click", () =>{
     PageId--;
     moveToTheNextPage(PageId);
 });
+
+checkboxBtn.addEventListener("click",()=>{
+    if(checkboxBtn.checked){
+        monthLabel.classList.add("Uncheckd_Label");
+        monthLabel.classList.remove("checkd_Label");
+        yearlyLabel.classList.add("checkd_Label");
+    }
+    else{
+        yearlyLabel.classList.remove("Uncheckd_Label");
+        yearlyLabel.classList.add("checkd_Label");
+        monthLabel.classList.add("Uncheckd_Label");
+    }
+})
