@@ -51,6 +51,7 @@
         <div class="step_1 ">
           <h1 class="head">Personal info</h1>
           <p class="para">Please provide your name, email address, and phone number.</p>
+          <form class="form">
           <label for="name" class="label">Name</label>
           <input type="text" id="name" class="details_input" placeholder="e.g. Stephen King"  autocomplete="off">
           <label for="email" class="label">Email Address</label>
@@ -59,8 +60,9 @@
           <input type="text" id="number" class="details_input" placeholder="e.g. +1 234 567 890" autocomplete="off">
           <div class="suivant">
             <label class="label error">Go Back</label>
-            <button class="next">Next Step</button>
+            <button type="submit" class="next">Next Step</button>
           </div>
+        </form>
         </div>
         <div class="step_2 notAvailable">
           <h1 class="head">Select your plan</h1>
@@ -180,5 +182,6 @@
         </div>
       </div>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>
